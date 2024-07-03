@@ -1,0 +1,108 @@
+:root {
+    --primary-color: black;
+    --secondary-color: white;
+}
+
+.navbar {
+    /* width: 70%; */
+    /* width: 310px; */
+    width: 62px;
+    margin: 32px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 32px;
+    height: 62px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+    z-index: 1;
+}
+
+.navbar .logo {
+    height: 45px;
+    width: 45px;
+    background-color: var(--secondary-color);
+    border-radius: 32px;
+    margin-left: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar .navbar-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.navbar ul {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar ul li {
+    padding-right: 20px;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.home {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25cm;
+}
+
+.btn {
+    height: 45px;
+    width: 220px;
+    border-radius: 32px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.icon-skills {
+    width: 52px;
+    height: 52px;
+    margin-left: 10px;
+}
+
+.hero {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: solid var(--secondary-color) 5px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: blue
+}
