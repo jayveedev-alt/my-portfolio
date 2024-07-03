@@ -211,7 +211,7 @@ export default function LandingPage() {
                                         </div>
                                         <div className="mt-2 text-right">
                                             {item.tech.map((item, key1) => {
-                                                return (<small key={key1} className="bg-white py-1 px-6 rounded-sm text-black font-mono mr-1 mt-3">{item}</small>)
+                                                return (<small key={key1} className="bg-white py-1 px-2 text-xs text-black font-mono ml-2">{item}</small>)
                                             })}
                                         </div>
                                     </CarouselItem>
