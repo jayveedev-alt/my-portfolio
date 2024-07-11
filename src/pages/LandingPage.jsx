@@ -1,9 +1,6 @@
 import { motion, useInView } from "framer-motion"
-
 import PageHeader from "./components/PageHeader";
-import { Link } from "react-router-dom";
 import { useRef } from "react";
-
 import { DiAndroid, DiBitbucket, DiBootstrap, DiCodeigniter, DiComposer, DiCss3, DiDjango, DiGit, DiHtml5, DiJqueryLogo, DiJsBadge, DiMysql, DiNpm, DiPhonegap, DiPhotoshop, DiPhp, DiPython, DiReact, DiVisualstudio, DiYii } from "react-icons/di";
 import {
     Carousel,
@@ -12,9 +9,8 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Card, CardContent, CardDescription, CardHeader } from "@/components/ui/card";
+import { IoIosHeart } from "react-icons/io";
 import hero from "@/assets/images/hero.jpg"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { getProjects } from "@/data/data";
 
 export default function LandingPage() {
@@ -171,8 +167,6 @@ export default function LandingPage() {
                             <CarouselItem className="pl-1 basis-1/20">
                                 <DiAndroid className="icon-skills" />
                             </CarouselItem>
-
-
                         </CarouselContent>
                     </Carousel>
                 </div>
@@ -252,6 +246,10 @@ export default function LandingPage() {
                     </motion.button>
                 </div>
             </section>
+
+            <div className="text-center py-7">
+                <label className="font-mono text-white">Made with ❤️ by John Benedict <span className="font-semibold">Santos</span> </label>
+            </div>
         </>
     )
 }
