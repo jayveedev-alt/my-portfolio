@@ -6,12 +6,15 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
 } from "@/components/ui/carousel"
-import { IoIosHeart } from "react-icons/io";
 import hero from "@/assets/images/hero.jpg"
 import { getProjects } from "@/data/data";
+import { Button } from "@/components/ui/button";
+import { ChevronRightIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
+import { RxPlusCircled } from "react-icons/rx";
+import { Dialog } from "@radix-ui/react-dialog";
+import { DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Separator } from "@/components/ui/separator";
 
 export default function LandingPage() {
 
@@ -34,6 +37,10 @@ export default function LandingPage() {
 
     const messageMe = () => {
         window.location.href = 'mailto:zbenedictjhon97@gmail.com';
+    }
+
+    const webLink = (link) => {
+        window.location.href = link;
     }
 
     return (
@@ -173,7 +180,7 @@ export default function LandingPage() {
             </section>
 
             <section className="project" ref={projectRef} >
-                <div className="h-screen flex flex-col items-center justify-center text-center">
+                <div className="flex flex-col items-center justify-center text-center pt-44">
                     <motion.h1
                         className="font-bold text-white text-2xl lg:text-5xl md:text-4xl"
                         animate={{ y: projectInView ? -10 : 10 }}
@@ -189,32 +196,55 @@ export default function LandingPage() {
                         Explore Now
                     </motion.small>
 
-                    <Carousel className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-3xl">
-                        <CarouselContent>
+                    <div className="container mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
                             {getProjects.map((item, key) => {
+                                // console.log(item);
                                 return (
-                                    <CarouselItem key={key}>
-                                        <div>
-                                            <h1 className="font-bold text-white text-2xl">{item.title}</h1>
-                                            <p className="text-white font-mono">
-                                                {item.desc}
-                                            </p>
+                                    <div key={key}>
+                                        <div className="project-container">
+                                            <img src={item.src} className="project-image" />
+                                            <div className="project-image-overlay overlay-fade font-mono text-white flex flex-col justify-center items-center">
+                                                <Dialog>
+                                                    <DialogTrigger>
+                                                        <RxPlusCircled size={70} />
+                                                    </DialogTrigger>
+                                                    <DialogContent>
+                                                        <DialogHeader>
+                                                            <DialogTitle>{item.title}</DialogTitle>
+                                                            <img src={item.src} className="project-image" />
+                                                            <DialogDescription>{item.desc}</DialogDescription>
+                                                        </DialogHeader>
+                                                        <div className="">
+                                                            {item.tech.map((item, key1) => {
+                                                                return (
+                                                                    <small key={key1} className=" text-black font-mono">
+                                                                        {key1 > 0 ? (" | ") : ("")}{item}
+                                                                    </small>
+                                                                )
+                                                            })}
+
+                                                        </div>
+                                                    </DialogContent>
+                                                </Dialog>
+                                            </div>
                                         </div>
-                                        <div className="bg-white p-1 shadow-2xl mt-2">
-                                            <img src={item.src} />
+                                        <div className="text-left mt-1 gap-2">
+                                            {item.isGithubLink ? (
+                                                <Button onClick={() => webLink(item.link)}>
+                                                    <GitHubLogoIcon className="h-4 w-4" />
+                                                </Button>
+                                            ) : (
+                                                <Button onClick={() => webLink(item.link)}>
+                                                    <ChevronRightIcon className="mr-2 h-4 w-4" /> Live Website
+                                                </Button>
+                                            )}
                                         </div>
-                                        <div className="mt-2 text-right">
-                                            {item.tech.map((item, key1) => {
-                                                return (<small key={key1} className="bg-white py-1 px-2 text-xs text-black font-mono ml-2">{item}</small>)
-                                            })}
-                                        </div>
-                                    </CarouselItem>
+                                    </div>
                                 )
                             })}
-                        </CarouselContent>
-                        <CarouselPrevious />
-                        <CarouselNext />
-                    </Carousel>
+                        </div>
+                    </div>
                 </div>
             </section>
 

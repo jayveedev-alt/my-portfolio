@@ -1,6 +1,7 @@
 import pro1 from "@/assets/images/proj/1.png"
 import pro2 from "@/assets/images/proj/2.png"
 import pro3 from "@/assets/images/proj/3.png"
+import pro4 from "@/assets/images/proj/4.png"
 
 export const getProjects = [
     // {
@@ -16,31 +17,31 @@ export const getProjects = [
         title: "ICT Infrastructure and Permit Application",
         desc: "ICT Infrastructure and Permit Application is a cloud-based platform that allows users to request building permits and submit the necessary documentation.",
         tech: ["Yii", "MySql", "CSS", "Bootstrap", "Javascript"],
-        git: null,
-        site: null,
+        isGithubLink: true,
+        link: "https://github.com/jayveedev-alt/ipa",
     },
     {
         src: pro1,
         title: "Apartment Management System",
         desc: "Apartment Management System is a cloud-based rental platform designed to let users browse available apartments or rooms, complete with detailed information.",
         tech: ["Core PHP", "CSS", "Javascript", "Bootstrap", "ExpressJs", "MySql", "JQuery", "Ajax"],
-        git: null,
-        site: null,
+        isGithubLink: true,
+        link: "https://github.com/jayveedev-alt/ams",
     },
+    // {
+    //     src: pro3,
+    //     title: "Self Ordering Application",
+    //     desc: "Self-Ordering Application is a cloud-based platform designed for fast-food restaurants, allowing customers to place their orders directly through interactive kiosk machines. This system enables users to browse the menu, customize their orders, and complete transactions efficiently.",
+    //     tech: ["ReactJs", "React-Query", "CSS", "Zustand ", "Axios", "Tailwind", "React-Dom"],
+    //     isGithubLink: false,
+    //     link: "Asdas",
+    // },
     {
-        src: pro3,
-        title: "Self Ordering Application",
-        desc: "Self-Ordering Application is a cloud-based platform designed for fast-food restaurants, allowing customers to place their orders directly through interactive kiosk machines. This system enables users to browse the menu, customize their orders, and complete transactions efficiently.",
-        tech: ["ReactJs", "React-Query", "CSS", "Zustand ", "Axios", "Tailwind", "React-Dom"],
-        git: null,
-        site: null,
-    },
-    {
-        src: pro1,
+        src: pro4,
         title: "Portfolio",
         desc: "This is my personal website, designed to showcase my skills in web development.",
         tech: ["ReactJs", "Framer-Motion", "CSS", "Tailwind"],
-        git: null,
-        site: null,
+        isGithubLink: false,
+        link: "https://jayveedev.vercel.app/",
     },
 ]; 
