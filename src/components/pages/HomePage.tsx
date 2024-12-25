@@ -21,17 +21,17 @@ export default function HomePage() {
     const aboutRef = useRef(null);
     const contactRef = useRef(null);
 
-    const homeInView = useInView(homeRef);
-    const projectInView = useInView(projectRef);
-    const workInView = useInView(workRef);
-    const aboutInView = useInView(aboutRef);
-    const contactInView = useInView(contactRef);
+    // const homeInView = useInView(homeRef);
+    // const projectInView = useInView(projectRef);
+    // const workInView = useInView(workRef);
+    // const aboutInView = useInView(aboutRef);
+    // const contactInView = useInView(contactRef);
 
-    const homeScroll = () => homeRef.current.scrollIntoView({ behavior: 'smooth' });
-    const projectScroll = () => projectRef.current.scrollIntoView({ behavior: 'smooth' });
-    const workScroll = () => workRef.current.scrollIntoView({ behavior: 'smooth' });
-    const aboutScroll = () => aboutRef.current.scrollIntoView({ behavior: 'smooth' });
-    const contactScroll = () => contactRef.current.scrollIntoView({ behavior: 'smooth' });
+    const homeScroll = () => homeRef.current?.scrollIntoView({ behavior: 'smooth' });
+    const projectScroll = () => projectRef.current?.scrollIntoView({ behavior: 'smooth' });
+    const workScroll = () => workRef.current?.scrollIntoView({ behavior: 'smooth' });
+    const aboutScroll = () => aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
+    const contactScroll = () => contactRef.current?.scrollIntoView({ behavior: 'smooth' });
 
     return (
         <>
