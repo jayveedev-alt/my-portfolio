@@ -9,17 +9,17 @@ import { cn } from "@/lib/utils";
 import DotPattern from "../ui/dot-pattern";
 import hero from "@/assets/img/hero.jpg";
 import react from "@/assets/react.svg";
-import { useInView } from "framer-motion";
+// import { useInView } from "framer-motion";
 import { useRef } from "react";
 import ScrollProgress from "@/components/ui/scroll-progress";
 
 export default function HomePage() {
 
-    const homeRef = useRef(null);
-    const projectRef = useRef(null);
-    const workRef = useRef(null);
-    const aboutRef = useRef(null);
-    const contactRef = useRef(null);
+    const homeRef = useRef<HTMLDivElement>(null);
+    const projectRef = useRef<HTMLDivElement>(null);
+    const workRef = useRef<HTMLDivElement>(null);
+    const aboutRef = useRef<HTMLDivElement>(null);
+    const contactRef = useRef<HTMLDivElement>(null);
 
     // const homeInView = useInView(homeRef);
     // const projectInView = useInView(projectRef);
