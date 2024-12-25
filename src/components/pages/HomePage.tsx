@@ -1,4 +1,4 @@
-import { Facebook, FacebookIcon, GithubIcon, Link, LinkedinIcon } from "lucide-react";
+import { GithubIcon, Link } from "lucide-react";
 import { Button } from "../ui/button";
 import { FadeText } from "../ui/fade-text";
 import { Badge } from "../ui/badge";
