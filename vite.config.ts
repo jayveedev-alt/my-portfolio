@@ -6,8 +6,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      // "@": path.resolve(__dirname, "./src"),
-      '@': '/src',
+      "@": path.resolve(__dirname, "./src"),
     },
   },
   assetsInclude: ['**/*.PNG', '**/*.jpg', '**/*.jpeg', '**/*.png', '**/*.gif', '**/*.svg'],

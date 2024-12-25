@@ -1,5 +1,5 @@
-import project1 from "@/assets/img/project1.PNG";
-import project2 from "@/assets/img/project2.PNG";
+import project1 from "../assets/img/project1.PNG";
+import project2 from "../assets/img/project2.PNG";
 import { FacebookIcon, GithubIcon, LinkedinIcon } from "lucide-react";
 
 type ProjectLinks = {
