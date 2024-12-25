@@ -228,8 +228,8 @@ export default function HomePage() {
                 <div className="flex w-full max-w-6xl flex-col space-y-4 pt-8">
                     <div className="">
                         <Card className="p-7 bg-muted">
-                            <div className="-mt-32 flex justify-end -mb-24">
-                                <img src={hero} className="rounded-full h-52 shadow" />
+                            <div className="hidden -mt-32 sm:flex justify-end -mb-24">
+                                <img src={hero} className="rounded-full h-24 sm:h-52 shadow" />
                             </div>
                             <h1 className="text-2xl font-extrabold leading-tight text-foreground sm:text-2xl md:text-3xl">About</h1>
                             <p className="text-primary font-mono font-bold">_what_i_love_to_do?</p>
