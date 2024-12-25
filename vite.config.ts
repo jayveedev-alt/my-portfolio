@@ -4,7 +4,7 @@ import { defineConfig } from "vite"
 
 export default defineConfig({
   plugins: [react()],
-  // base: "./", // Update if using a custom domain or subdirectory
+  base: "./", // Update if using a custom domain or subdirectory
   // build: {
   //   outDir: "dist",
   //   emptyOutDir: true,
