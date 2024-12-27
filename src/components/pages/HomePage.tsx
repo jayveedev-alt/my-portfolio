@@ -136,7 +136,7 @@ export default function HomePage() {
                                                     className=""
                                                     disabled={item.links.live ? false : true}
                                                     onClick={() => {
-                                                        if(item.links.live)
+                                                        if (item.links.live)
                                                             window.location.href = item.links.live
                                                         return null
                                                     }}
@@ -148,7 +148,7 @@ export default function HomePage() {
                                                     className="rounded-full bg-gray-600 hover:bg-gray-500"
                                                     disabled={item.links.github ? false : true}
                                                     onClick={() => {
-                                                        if(item.links.github)
+                                                        if (item.links.github)
                                                             window.location.href = item.links.github
                                                         return null
                                                     }}
@@ -177,6 +177,11 @@ export default function HomePage() {
                                             size="icon"
                                             className="rounded-full bg-gray-600 hover:bg-gray-500"
                                             disabled={item.links.live ? false : true}
+                                            onClick={() => {
+                                                if (item.links.live)
+                                                    window.location.href = item.links.live
+                                                return null
+                                            }}
                                         >
                                             <Link />
                                         </Button>
@@ -184,6 +189,11 @@ export default function HomePage() {
                                             size="icon"
                                             className="rounded-full bg-gray-600 hover:bg-gray-500"
                                             disabled={item.links.github ? false : true}
+                                            onClick={() => {
+                                                if (item.links.github)
+                                                    window.location.href = item.links.github
+                                                return null
+                                            }}
                                         >
                                             <GithubIcon />
                                         </Button>
